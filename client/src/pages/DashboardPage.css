@@ -1,0 +1,118 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F7F8FA;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E5E7EB;
+    flex-shrink: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-left .logo {
+    color: #3B82F6;
+}
+
+.header-left h1 {
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: 600;
+    margin: 0;
+    color: #1F2937;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-right .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6B7280;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right .icon-btn:hover {
+    background-color: #F3F4F6;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dashboard-main {
+    display: grid;
+    grid-template-columns: 280px 1fr 360px;
+    /* Three columns */
+    flex-grow: 1;
+    overflow: hidden;
+    gap: 1.5rem;
+    /* Gap between columns */
+    padding: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .dashboard-main {
+        grid-template-columns: 250px 1fr 320px;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-main {
+        /* Stack chat on the right, main content takes up space */
+        grid-template-columns: 1fr 300px;
+    }
+
+    .session-list {
+        display: none;
+        /* Hide session list by default on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-main {
+        /* Stack all columns */
+        grid-template-columns: 1fr;
+    }
+
+    .chat-panel {
+        display: none;
+        /* Hide chat panel on the smallest screens */
+    }
+
+    .dashboard-header h1 {
+        display: none;
+        /* Hide title on mobile */
+    }
+}

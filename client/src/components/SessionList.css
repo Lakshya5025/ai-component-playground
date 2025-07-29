@@ -1,0 +1,105 @@
+.session-list-container {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    /* 16px */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+}
+
+.session-list-container h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4B5563;
+    margin: 0 0 1rem 0;
+    padding: 0 0.5rem;
+}
+
+.new-session-btn {
+    background-color: #3B82F6;
+    border: none;
+    color: #ffffff;
+    padding: 0.75rem;
+    /* 12px */
+    border-radius: 0.5rem;
+    /* 8px */
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    /* 14px */
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.new-session-btn:hover {
+    background-color: #2563EB;
+}
+
+.sessions-scroll-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.session-item {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.2s;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    color: #374151;
+}
+
+.session-item-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+.session-item-left .icon {
+    color: #9CA3AF;
+    flex-shrink: 0;
+}
+
+.session-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.session-item .chevron {
+    color: #9CA3AF;
+    opacity: 0;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.session-item:hover {
+    background-color: #F3F4F6;
+}
+
+.session-item:hover .chevron {
+    opacity: 1;
+}
+
+.session-item.active {
+    background-color: #EFF6FF;
+    color: #1D4ED8;
+    font-weight: 600;
+}
+
+.session-item.active .icon,
+.session-item.active .chevron {
+    color: #3B82F6;
+    opacity: 1;
+}
